@@ -30,12 +30,10 @@ namespace Soup
                 new President(5, "Сооронбай", "Жээнбеков", "СДПК"),
                 new President(6, "Садыр", "Жапаров", "Мекенчил")
             };
-            List<President> sdpkPresidents = presidents.FindAll(delegate (President p) {
-                return p.Party == "СДПК";
-            });
-            sdpkPresidents.Sort(delegate (President p1, President p2) {
-                return String.Compare(p1.Name, p2.Name);
-            });
+            List<President> sdpkPresidents = presidents.FindAll((p) => p.Party == "СДПК");
+
+            sdpkPresidents.Sort((p1, p2) => String.Compare(p1.Name, p2.Name));
+
             foreach (President p in sdpkPresidents) {
                 Console.WriteLine(p.Name);
             }
