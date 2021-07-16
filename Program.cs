@@ -16,6 +16,14 @@ namespace Soup
             LastName = lastName;
             Party = party;
         }
+
+        public static bool IsMemberOfTheSdpkParty(President p) {
+            return p.Party == "СДПК";
+        }
+
+        public static int CompareByName(President p1, President p2) {
+            return String.Compare(p1.Name, p2.Name);
+        }
     }
 
     class Program
@@ -30,9 +38,9 @@ namespace Soup
                 new President(5, "Сооронбай", "Жээнбеков", "СДПК"),
                 new President(6, "Садыр", "Жапаров", "Мекенчил")
             };
-            List<President> sdpkPresidents = presidents.FindAll((p) => p.Party == "СДПК");
+            List<President> sdpkPresidents = presidents.FindAll(President.IsMemberOfTheSdpkParty);
 
-            sdpkPresidents.Sort((p1, p2) => String.Compare(p1.Name, p2.Name));
+            sdpkPresidents.Sort(President.CompareByName);
 
             foreach (President p in sdpkPresidents) {
                 Console.WriteLine(p.Name);
