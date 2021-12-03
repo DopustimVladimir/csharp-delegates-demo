@@ -1,7 +1,9 @@
 
-# Soup
+# Delegates in C#
 
-A delegate represents a type-safe object that contains a reference to a method that matches a signature (the return type and set of arguments are checked).
+A delegate in C# represents a type-safe object that contains a reference to a method that matches a signature (the return type and set of arguments are checked). The .NET API has `FindAll()`, `Sort()` and many other methods that take a delegate as an argument to deal with it. Also, delegates are needed to organize events.
+
+An example:
 
 ```csharp
 delegate int IntOperation(int a, int b);
