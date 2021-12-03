@@ -1,7 +1,7 @@
 
 # Soup
 
-Делегат представляет собой безопасный в отношении типов объект, который содержит ссылку на метод, подходящий по условию (проверяется возвращаемый тип и набор аргументов).
+A delegate represents a type-safe object that contains a reference to a method that matches a signature (the return type and set of arguments are checked).
 
 ```csharp
 delegate int IntOperation(int a, int b);
@@ -32,7 +32,7 @@ static int Multiply(int x, int y)
 }
 ```
 
-Пример с анонимными функциями:
+An example with anonymous functions:
 
 ```csharp
 delegate int IntOperation(int a, int b);
@@ -49,7 +49,7 @@ static void Main()
 }
 ```
 
-Пример с лямбдами:
+An example with lambdas:
 
 ```csharp
 delegate int IntOperation(int a, int b);
@@ -68,7 +68,7 @@ static void Main()
 }
 ```
 
-Пример со списком извлечения:
+An example with invocation list:
 
 ```csharp
 delegate int IntOperation(int a, int b);

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace Soup
@@ -18,7 +18,7 @@ namespace Soup
         }
 
         public static bool IsMemberOfTheSdpkParty(President p) {
-            return p.Party == "СДПК";
+            return p.Party == "SDPK";
         }
 
         public static int CompareByName(President p1, President p2) {
@@ -31,12 +31,12 @@ namespace Soup
         static void Main()
         {
             List<President> presidents = new List<President> {
-                new President(1, "Аскар", "Акаев"),
-                new President(2, "Курманбек", "Бакиев"),
-                new President(3, "Роза", "Отунбаева", "СДПК"),
-                new President(4, "Алмазбек", "Атамбаев", "СДПК"),
-                new President(5, "Сооронбай", "Жээнбеков", "СДПК"),
-                new President(6, "Садыр", "Жапаров", "Мекенчил")
+                new President(1, "Askar", "Akayev"),
+                new President(2, "Kurmanbek", "Bakiyev"),
+                new President(3, "Roza", "Otunbayeva", "SDPK"),
+                new President(4, "Almazbek", "Atambayev", "SDPK"),
+                new President(5, "Sooronbay", "Jeenbekov", "SDPK"),
+                new President(6, "Sadyr", "Japarov", "Mekenchil")
             };
             List<President> sdpkPresidents = presidents.FindAll(President.IsMemberOfTheSdpkParty);
 
