@@ -1,0 +1,32 @@
+# The line below disallow to inherit .editorconfig from parent directories
+root = true
+
+# C# files
+[*.cs]
+
+#### Core EditorConfig Options ####
+
+# Indentation and spacing
+indent_size = 4
+indent_style = space
+
+# New line preferences
+end_of_line = lf
+insert_final_newline = true
+
+#### C# Formatting Rules ####
+
+# New line preferences
+csharp_new_line_before_catch = false
+csharp_new_line_before_else = false
+csharp_new_line_before_finally = false
+csharp_new_line_before_members_in_anonymous_types = false
+csharp_new_line_before_members_in_object_initializers = false
+csharp_new_line_before_open_brace = methods,properties,types
+csharp_new_line_between_query_expression_clauses = false
+
+# Indentation preferences
+csharp_indent_case_contents_when_block = false
+
+# Wrapping preferences
+csharp_preserve_single_line_statements = false
