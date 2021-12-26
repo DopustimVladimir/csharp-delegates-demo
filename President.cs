@@ -1,4 +1,6 @@
 
+namespace DelegatesDemo;
+
 class President
 {
     public int Id { get; set; }
